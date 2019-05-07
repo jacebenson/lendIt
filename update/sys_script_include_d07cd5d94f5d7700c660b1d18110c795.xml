@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_lendit.HoldItem</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>HoldItem</name>
+        <script><![CDATA[function HoldItem (item) {
+	if (!item) {
+		return;
+	}
+	
+	// get the highest positioned item
+	var query = 'item=' + item;
+	var itemQueue = new GlideRecord('x_snc_lendit_item_queue');
+	itemQueue.orderByDesc('position');
+	itemQueue.query();
+	
+	// if there is a person queued for the item then add a
+	// hold on the item
+	if (itemQueue.next()) {
+		var position = itemQueue.position++;
+		itemQueue.initialize();
+		itemQueue.borrower = gs.getUser();
+		itemQueue.item = item;
+		itemQueue.position = position;
+		itemQueue.insert();
+	}
+	else {
+		BorrowItem(item);
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-07 22:05:36</sys_created_on>
+        <sys_id>d07cd5d94f5d7700c660b1d18110c795</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>HoldItem</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_update_name>sys_script_include_d07cd5d94f5d7700c660b1d18110c795</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-07 22:34:36</sys_updated_on>
+    </sys_script_include>
+</record_update>

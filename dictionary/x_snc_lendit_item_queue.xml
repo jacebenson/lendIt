@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Item Queue" max_length="40" name="x_snc_lendit_item_queue" type="collection">
+        <element label="Borrower" mandatory="true" max_length="32" name="borrower" reference="sys_user" type="reference"/>
+        <element label="Item" mandatory="true" max_length="32" name="item" reference="x_snc_lendit_item" type="reference"/>
+        <element default="0" label="Position" mandatory="true" max_length="40" name="position" type="integer"/>
+        <index name="index">
+            <element name="item"/>
+        </index>
+        <index name="index2">
+            <element name="borrower"/>
+        </index>
+    </element>
+</database>

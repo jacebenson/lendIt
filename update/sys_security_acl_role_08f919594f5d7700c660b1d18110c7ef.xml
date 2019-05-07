@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-07 21:51:08</sys_created_on>
+        <sys_id>08f919594f5d7700c660b1d18110c7ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_lendit_item_queue.x_snc_lendit.item_queue_user</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_security_acl display_value="x_snc_lendit_item_queue">ccf919594f5d7700c660b1d18110c7ec</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_08f919594f5d7700c660b1d18110c7ef</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-07 21:51:08</sys_updated_on>
+        <sys_user_role display_value="x_snc_lendit.item_queue_user" name="x_snc_lendit.item_queue_user">f7e995594f5d7700c660b1d18110c780</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

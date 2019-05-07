@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Item Instance" max_length="40" name="x_snc_lendit_item_instance" type="collection">
+        <element label="Assigned" max_length="32" name="assigned" reference="sys_user" type="reference"/>
+        <element label="Group" max_length="32" name="group" reference="x_snc_lendit_item" type="reference"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="3" default="0" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Available" value="0"/>
+                <element inactive_on_update="false" label="Borrowed" value="1"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="assigned"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+        <index name="index3">
+            <element name="group"/>
+        </index>
+    </element>
+</database>

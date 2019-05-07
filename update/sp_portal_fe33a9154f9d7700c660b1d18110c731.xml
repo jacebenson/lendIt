@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="lendit_search">a4b125dd4f5d7700c660b1d18110c7f1</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-07 22:32:11</sys_created_on>
+        <sys_id>fe33a9154f9d7700c660b1d18110c731</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LendIt</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_update_name>sp_portal_fe33a9154f9d7700c660b1d18110c731</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-07 22:32:11</sys_updated_on>
+        <theme/>
+        <title>LendIt</title>
+        <url_suffix>lendit</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=fe33a9154f9d7700c660b1d18110c731"/>
+</record_update>
