@@ -6,108 +6,113 @@
         <client_callable>false</client_callable>
         <description/>
         <name>releaseItem</name>
-        <script><![CDATA[function releaseItem(itemInstanceGr) {
-	if (!itemInstanceGr) {
-		return;
-	}
-
-	var itemSysId = itemInstanceGr.getValue('group');
-	var itemInstanceSysId = itemInstanceGr.getValue('sys_id');
-
-	//unassign item from instance
-	unassignInstance(itemInstanceGr);
+        <script><![CDATA[var releaseItem = Class.create();
+releaseItem.prototype = {
+	initialize: function() {
+	},
 	
-	//check if there is any queue
-	if (checkQueue(itemSysId)) {
-		popQueue(itemSysId, itemInstanceGr);
-	}
-}
-
-function checkQueue(sysId) {
-	if (!sysId) {
-		return;
-	}
-
-	var queryGr = 'item=' + sysId;
-	//checkQueue for the item type
-	var grXSncLenditItemQueue = new GlideRecord('x_snc_lendit_item_queue');
-	grXSncLenditItemQueue.addEncodedQuery(queryGr);
-	grXSncLenditItemQueue.query();
-	return grXSncLenditItemQueue.hasNext();
-
-}
-
-function popQueue(itemSysId, itemInstanceGr) {
-	if (!itemSysId && !itemInstanceGr) {
-		return;
-	}
-	
-	var counter = 0;
-	var queryGr = 'item=' + itemSysId;
-	//checkQueue for the item type
-	var grXSncLenditItemQueue = new GlideRecord('x_snc_lendit_item_queue');
-	grXSncLenditItemQueue.addEncodedQuery(queryGr);
-	grXSncLenditItemQueue.orderBy('position');
-	grXSncLenditItemQueue.query();
-	
-	while (grXSncLenditItemQueue.next() ) {
-		var userInQueue = grXSncLenditItemQueue.getValue('borrower');
-		var queuePosition = parseInt(grXSncLenditItemQueue.getValue('position'));
-		queuePosition = queuePosition - 1;
-		//assign the current item to the user if position is 0
-		if (counter == 0 ) {
-			borrowItem(itemInstanceGr.sys_id, userInQueue);
-			counter++;
-			grXSncLenditItemQueue.deleteRecord();
-			continue;
+	returnInstance: function (itemInstanceGr) {
+		if (!itemInstanceGr) {
+			return;
 		}
 		
-		//subtract position 
-		grXSncLenditItemQueue.setValue('position', queuePosition);
-		grXSncLenditItemQueue.update();
+		var itemSysId = itemInstanceGr.getValue('group');
+		var itemInstanceSysId = itemInstanceGr.getValue('sys_id');
 		
-	}
-}
-
-function unassignInstance(gr) {
-	if (!gr) {
-		return;
-	}
-
-	gr.setValue('assigned', '');
-	gr.setValue('state', '0');
-	gr.update();
-}
-
-
-function borrowItem (sysId, userSysId) {
-	if (!sysId) {
-		return;
-	}
-	var grQuery = 'group=' + sysId;
+		//unassign item from instance
+		unassignInstance(itemInstanceGr);
+		
+	},
 	
-	var grXSncLenditItemInstance = new GlideRecord('x_snc_lendit_item_instance');
-	grXSncLenditItemInstance.addEncodedQuery(grQuery);
-	grXSncLenditItemInstance.orderBy('sys_updated_by');
-	grXSncLenditItemInstance.setLimit(1);
-	grXSncLenditItemInstance.query();
-	if (grXSncLenditItemInstance.get(sysId)) {
-		grXSncLenditItemInstance.setValue('assigned', userSysId);
-		grXSncLenditItemInstance.setValue('state', '1');
-		grXSncLenditItemInstance.update();
-	}
-}]]></script>
+	checkQueue: function (sysId) {
+		if (!sysId) {
+			return;
+		}
+		
+		var queryGr = 'item=' + sysId;
+		//checkQueue for the item type
+		var grXSncLenditItemQueue = new GlideRecord('x_snc_lendit_item_queue');
+		grXSncLenditItemQueue.addEncodedQuery(queryGr);
+		grXSncLenditItemQueue.query();
+		return grXSncLenditItemQueue.hasNext();
+		
+	},
+	
+	popQueue: function (itemSysId) {
+		if (!itemSysId) {
+			return;
+		}
+		
+		var counter = 0;
+		var queryGr = 'item=' + itemSysId;
+		//checkQueue for the item type
+		var grXSncLenditItemQueue = new GlideRecord('x_snc_lendit_item_queue');
+		grXSncLenditItemQueue.addEncodedQuery(queryGr);
+		grXSncLenditItemQueue.orderBy('position');
+		grXSncLenditItemQueue.query();
+		
+		while (grXSncLenditItemQueue.next() ) {
+			var userInQueue = grXSncLenditItemQueue.getValue('borrower');
+			var queuePosition = parseInt(grXSncLenditItemQueue.getValue('position'));
+			queuePosition = queuePosition - 1;
+			//assign the current item to the user if position is 0
+			if (counter == 0 ) {
+				this.borrowItem(itemSysId, userInQueue);
+				counter++;
+				grXSncLenditItemQueue.deleteRecord();
+				continue;
+			}
+			
+			//subtract position
+			grXSncLenditItemQueue.setValue('position', queuePosition);
+			grXSncLenditItemQueue.update();
+			
+		}
+	},
+	
+	unassignInstance: function (gr) {
+		if (!gr) {
+			return;
+		}
+		
+		gr.setValue('assigned', '');
+		gr.setValue('state', '0');
+		gr.update();
+	},
+	
+	
+	borrowItem: function (sysId, userSysId) {
+		if (!sysId) {
+			return;
+		}
+		var grQuery = 'group=' + sysId;
+		grQuery += '^state=0';
+		
+		var grXSncLenditItemInstance = new GlideRecord('x_snc_lendit_item_instance');
+		grXSncLenditItemInstance.addEncodedQuery(grQuery);
+		grXSncLenditItemInstance.orderBy('sys_updated_by');
+		grXSncLenditItemInstance.setLimit(1);
+		grXSncLenditItemInstance.query();
+		if (grXSncLenditItemInstance.get(sysId)) {
+			grXSncLenditItemInstance.setValue('assigned', userSysId);
+			grXSncLenditItemInstance.setValue('state', '1');
+			grXSncLenditItemInstance.update();
+		}
+	},
+	
+	type: 'releaseItem'
+};]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-05-07 23:14:33</sys_created_on>
         <sys_id>befc65914f513300dcc74a10a310c758</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>releaseItem</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
         <sys_update_name>sys_script_include_befc65914f513300dcc74a10a310c758</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-05-08 03:14:32</sys_updated_on>
+        <sys_updated_on>2019-05-08 05:37:57</sys_updated_on>
     </sys_script_include>
 </record_update>

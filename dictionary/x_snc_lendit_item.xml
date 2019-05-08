@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Item" max_length="40" name="x_snc_lendit_item" type="collection">
         <element label="Available" max_length="40" name="available" type="boolean"/>
+        <element attributes="pdf_cell_type=image" label="Image" max_length="40" name="image" type="user_image"/>
         <element label="Name" max_length="1000" name="name" type="string"/>
     </element>
 </database>

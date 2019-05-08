@@ -2,26 +2,19 @@
     <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
         <description/>
         <execution_script><![CDATA[(function WriteBackAction(input) {
-	// get the highest positioned item
-	var query = 'item=' + input.sys_id;
-	var itemQueue = new GlideRecord('x_snc_lendit_item_queue');
-	itemQueue.addEncodedQuery(query);
-	itemQueue.orderByDesc('position');
-	itemQueue.query();
+	var stateAvailable = '0';
+	var stateNonAvailable = '1';
 	
-	// if there is a person queued for the item then add a
-	// hold on the item
-	if (itemQueue.next()) {
-		var position = parseInt(itemQueue.getValue('position'));
-		position++;
-		itemQueue.initialize();
-		itemQueue.borrower = gs.getUser();
-		itemQueue.item = input.sys_id;
-		itemQueue.position = position;
-		itemQueue.insert();
-	}
-	else {
-		borrowItem(item);
+	var query = 'group=' + input.sys_id + '^state=' + stateAvailable;
+	var itemInstance = new GlideRecord('x_snc_lendit_item_instance');
+	itemInstance.addEncodedQuery(query);
+	itemInstance.query();
+	
+	gs.log('JOE ' + new Date().getTime() + ' query:' + query);
+	if (itemInstance.next()) {
+		itemInstance.setValue('assigned', gs.getUserID());
+		itemInstance.setValue('state', stateNonAvailable);
+		itemInstance.update();
 	}
 })(input);]]></execution_script>
         <name>Borrow</name>
@@ -30,14 +23,14 @@
         <sys_created_by>jacebenson</sys_created_by>
         <sys_created_on>2019-05-07 22:07:35</sys_created_on>
         <sys_id>468d919d4f5977006641cfa18110c737</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Borrow</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
         <sys_update_name>sys_sg_write_back_action_item_468d919d4f5977006641cfa18110c737</sys_update_name>
         <sys_updated_by>jlighthall</sys_updated_by>
-        <sys_updated_on>2019-05-08 03:23:39</sys_updated_on>
+        <sys_updated_on>2019-05-08 04:25:28</sys_updated_on>
         <table>x_snc_lendit_item_instance</table>
         <template/>
         <type>script</type>

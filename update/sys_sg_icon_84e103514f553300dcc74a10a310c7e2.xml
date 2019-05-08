@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_icon">
+    <sys_sg_icon action="INSERT_OR_UPDATE">
+        <icon>{"Shape":"Circle","FontName":"Font Awesome 5 Free","Value":"f164","FontColor":"#E65651","BackgroundColor":"#E65651","Name":"thumbs-up"}</icon>
+        <name>thumbs-up</name>
+        <sys_class_name>sys_sg_icon</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-08 05:25:16</sys_created_on>
+        <sys_id>84e103514f553300dcc74a10a310c7e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>thumbs-up</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_update_name>sys_sg_icon_84e103514f553300dcc74a10a310c7e2</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-08 05:25:16</sys_updated_on>
+    </sys_sg_icon>
+</record_update>

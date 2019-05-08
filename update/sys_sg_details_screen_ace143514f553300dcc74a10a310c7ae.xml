@@ -2,29 +2,29 @@
     <sys_sg_details_screen action="INSERT_OR_UPDATE">
         <application_roles/>
         <available_offline>false</available_offline>
-        <data_item display_value="Items">d82ad9d94f5977006641cfa18110c7f7</data_item>
+        <data_item display_value="Items Held">9a983e954f153300dcc74a10a310c71c</data_item>
         <description/>
         <fetch_type>not_required</fetch_type>
         <hidden>false</hidden>
-        <icon display_value="handshake">074a61114f513300dcc74a10a310c7f2</icon>
-        <item_view display_value="Items detail item view">9b4a61114f513300dcc74a10a310c7f6</item_view>
+        <icon display_value="thumbs-up">84e103514f553300dcc74a10a310c7e2</icon>
+        <item_view display_value="Held detail item view">dce143514f553300dcc74a10a310c71f</item_view>
         <name>Details</name>
         <order>10</order>
-        <parent>234a61114f513300dcc74a10a310c7e6</parent>
+        <parent>64e143514f553300dcc74a10a310c716</parent>
         <parent_table>sys_sg_master_item</parent_table>
         <roles_override/>
         <sys_class_name>sys_sg_details_screen</sys_class_name>
-        <sys_created_by>jacebenson</sys_created_by>
-        <sys_created_on>2019-05-07 23:02:40</sys_created_on>
-        <sys_id>bf4aa1114f513300dcc74a10a310c735</sys_id>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-08 05:25:17</sys_created_on>
+        <sys_id>ace143514f553300dcc74a10a310c7ae</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Details</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
-        <sys_update_name>sys_sg_details_screen_bf4aa1114f513300dcc74a10a310c735</sys_update_name>
-        <sys_updated_by>jacebenson</sys_updated_by>
-        <sys_updated_on>2019-05-07 23:02:40</sys_updated_on>
+        <sys_update_name>sys_sg_details_screen_ace143514f553300dcc74a10a310c7ae</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-08 05:25:17</sys_updated_on>
     </sys_sg_details_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=bf4aa1114f513300dcc74a10a310c735"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=ace143514f553300dcc74a10a310c7ae"/>
 </record_update>

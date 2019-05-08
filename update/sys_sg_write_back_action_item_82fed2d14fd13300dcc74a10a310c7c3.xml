@@ -2,8 +2,24 @@
     <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
         <description/>
         <execution_script><![CDATA[(function WriteBackAction(input) {
-    //Type appropriate comment here, and begin script below
- 
+	// get the highest positioned item
+	var query = 'item=' + input.sys_id;
+	var itemQueue = new GlideRecord('x_snc_lendit_item_queue');
+	itemQueue.addEncodedQuery(query);
+	itemQueue.orderByDesc('position');
+	itemQueue.query();
+	
+	// if there is a person queued for the item then add a
+	// hold on the item
+	if (itemQueue.next()) {
+		var position = parseInt(itemQueue.getValue('position'));
+		position++;
+		itemQueue.initialize();
+		itemQueue.borrower = gs.getUserID();
+		itemQueue.item = input.sys_id;
+		itemQueue.position = position;
+		itemQueue.insert();
+	}
 })(input);]]></execution_script>
         <name>Hold</name>
         <query_condition/>
@@ -11,14 +27,14 @@
         <sys_created_by>jlighthall</sys_created_by>
         <sys_created_on>2019-05-08 02:52:58</sys_created_on>
         <sys_id>82fed2d14fd13300dcc74a10a310c7c3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Hold</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
         <sys_update_name>sys_sg_write_back_action_item_82fed2d14fd13300dcc74a10a310c7c3</sys_update_name>
         <sys_updated_by>jlighthall</sys_updated_by>
-        <sys_updated_on>2019-05-08 02:52:58</sys_updated_on>
+        <sys_updated_on>2019-05-08 04:56:45</sys_updated_on>
         <table/>
         <template/>
         <type>script</type>

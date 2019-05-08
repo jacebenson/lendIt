@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="Hold">caeed2d14fd13300dcc74a10a310c70b</button>
+        <item_parameter display_value="sys_id">d10e62dd4fd13300dcc74a10a310c74d</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-08 03:59:10</sys_created_on>
+        <sys_id>40cdae9d4fd13300dcc74a10a310c787</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d10e62dd4fd13300dcc74a10a310c74d</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_40cdae9d4fd13300dcc74a10a310c787</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-08 03:59:10</sys_updated_on>
+        <ui_parameter display_value="Sys Id">8e3d2a9d4fd13300dcc74a10a310c701</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>
