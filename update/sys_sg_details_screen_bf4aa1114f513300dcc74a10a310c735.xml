@@ -6,25 +6,25 @@
         <description/>
         <fetch_type>not_required</fetch_type>
         <hidden>false</hidden>
-        <icon display_value="file-alt">595a5dd94f5977006641cfa18110c761</icon>
-        <item_view display_value="Details item view">a55a9dd94f5977006641cfa18110c71e</item_view>
+        <icon display_value="handshake">074a61114f513300dcc74a10a310c7f2</icon>
+        <item_view display_value="Items detail item view">9b4a61114f513300dcc74a10a310c7f6</item_view>
         <name>Details</name>
         <order>10</order>
-        <parent>795a5dd94f5977006641cfa18110c769</parent>
+        <parent>234a61114f513300dcc74a10a310c7e6</parent>
         <parent_table>sys_sg_master_item</parent_table>
         <roles_override/>
         <sys_class_name>sys_sg_details_screen</sys_class_name>
         <sys_created_by>jacebenson</sys_created_by>
-        <sys_created_on>2019-05-09 08:52:54</sys_created_on>
-        <sys_id>755a9dd94f5977006641cfa18110c78b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_created_on>2019-05-07 23:02:40</sys_created_on>
+        <sys_id>bf4aa1114f513300dcc74a10a310c735</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Details</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
-        <sys_update_name>sys_sg_details_screen_755a9dd94f5977006641cfa18110c78b</sys_update_name>
+        <sys_update_name>sys_sg_details_screen_bf4aa1114f513300dcc74a10a310c735</sys_update_name>
         <sys_updated_by>jacebenson</sys_updated_by>
-        <sys_updated_on>2019-05-07 21:55:28</sys_updated_on>
+        <sys_updated_on>2019-05-07 23:02:40</sys_updated_on>
     </sys_sg_details_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=755a9dd94f5977006641cfa18110c78b"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=bf4aa1114f513300dcc74a10a310c735"/>
 </record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_write_back_action_item">
+    <sys_sg_write_back_action_item action="INSERT_OR_UPDATE">
+        <description/>
+        <execution_script><![CDATA[(function WriteBackAction(input) {
+    //Type appropriate comment here, and begin script below
+ 
+})(input);]]></execution_script>
+        <name>Return</name>
+        <query_condition/>
+        <sys_class_name>sys_sg_write_back_action_item</sys_class_name>
+        <sys_created_by>jlighthall</sys_created_by>
+        <sys_created_on>2019-05-08 02:50:21</sys_created_on>
+        <sys_id>f95e5e914fd13300dcc74a10a310c71e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Return</sys_name>
+        <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
+        <sys_update_name>sys_sg_write_back_action_item_f95e5e914fd13300dcc74a10a310c71e</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-08 02:50:21</sys_updated_on>
+        <table/>
+        <template/>
+        <type>script</type>
+        <use_current_record_as_condition>false</use_current_record_as_condition>
+    </sys_sg_write_back_action_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=f95e5e914fd13300dcc74a10a310c71e"/>
+</record_update>

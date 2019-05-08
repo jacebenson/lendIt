@@ -2,21 +2,21 @@
     <sys_sg_master_item action="INSERT_OR_UPDATE">
         <condition/>
         <condition_order/>
-        <item_view display_value="Items item view">255a9dd94f5977006641cfa18110c74e</item_view>
+        <item_view display_value="Items item view">5f4aeddd4f113300dcc74a10a310c747</item_view>
         <name>Master Item</name>
-        <screen display_value="Items">e55a5dd94f5977006641cfa18110c765</screen>
+        <screen display_value="Items">e74aa1114f513300dcc74a10a310c731</screen>
         <sys_class_name>sys_sg_master_item</sys_class_name>
         <sys_created_by>jacebenson</sys_created_by>
-        <sys_created_on>2019-05-07 21:52:53</sys_created_on>
-        <sys_id>795a5dd94f5977006641cfa18110c769</sys_id>
+        <sys_created_on>2019-05-07 23:02:40</sys_created_on>
+        <sys_id>234a61114f513300dcc74a10a310c7e6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Master Item</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
-        <sys_update_name>sys_sg_master_item_795a5dd94f5977006641cfa18110c769</sys_update_name>
+        <sys_update_name>sys_sg_master_item_234a61114f513300dcc74a10a310c7e6</sys_update_name>
         <sys_updated_by>jacebenson</sys_updated_by>
-        <sys_updated_on>2019-05-07 21:52:53</sys_updated_on>
+        <sys_updated_on>2019-05-07 23:02:40</sys_updated_on>
         <table>x_snc_lendit_item</table>
     </sys_sg_master_item>
 </record_update>

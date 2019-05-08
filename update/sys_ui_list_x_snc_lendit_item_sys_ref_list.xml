@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_snc_lendit_item" element="NULL" name="x_snc_lendit_item" parent="NULL" relationship="NULL" sys_domain="global" view="b24263424f0133006641cfa18110c728">ba5ed9114f9977006641cfa18110c71d</list_id>
+            <list_id display_value="x_snc_lendit_item" element="NULL" name="x_snc_lendit_item" parent="NULL" relationship="NULL" sys_domain="global" view="ec4001623433230078507f0289bd019d">ba5ed9114f9977006641cfa18110c71d</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -40,7 +40,7 @@
             <sys_updated_by>kkaryadi</sys_updated_by>
             <sys_updated_on>2019-05-07 22:10:27</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">b24263424f0133006641cfa18110c728</view>
+            <view display_value="Reference List" name="sys_ref_list">ec4001623433230078507f0289bd019d</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

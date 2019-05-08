@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_snc_lendit_item_instance</name>
+        <name>x_snc_lendit_item</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>kkaryadi</sys_created_by>
-        <sys_created_on>2019-05-07 21:53:14</sys_created_on>
-        <sys_id>a66a111d4f5977006641cfa18110c71c</sys_id>
+        <sys_created_on>2019-05-07 21:49:15</sys_created_on>
+        <sys_id>5576ed554f113300dcc74a10a310c7e6</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_snc_lendit_item_instance</sys_name>
+        <sys_name>x_snc_lendit_item</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
-        <sys_update_name>ua_table_licensing_config_a66a111d4f5977006641cfa18110c71c</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_5576ed554f113300dcc74a10a310c7e6</sys_update_name>
         <sys_updated_by>kkaryadi</sys_updated_by>
-        <sys_updated_on>2019-05-07 21:53:14</sys_updated_on>
+        <sys_updated_on>2019-05-07 21:49:15</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

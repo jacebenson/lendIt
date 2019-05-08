@@ -3,27 +3,27 @@
         <application_roles/>
         <available_offline>false</available_offline>
         <data_item display_value="Items">d82ad9d94f5977006641cfa18110c7f7</data_item>
-        <description/>
+        <description>Find items to borrow, release items being borrowed, see the items you are borrowing</description>
         <fetch_type>not_required</fetch_type>
         <hidden>false</hidden>
-        <icon display_value="file-alt">382d995d4f5977006641cfa18110c74f</icon>
+        <icon display_value="handshake">074a61114f513300dcc74a10a310c7f2</icon>
         <name>Items</name>
-        <order>10</order>
-        <parent>a7ec191d4f5977006641cfa18110c765</parent>
+        <order>20</order>
+        <parent>6a19e95d4f113300dcc74a10a310c78d</parent>
         <parent_table>sys_sg_folder</parent_table>
         <roles_override/>
         <sys_class_name>sys_sg_master_detail_screen</sys_class_name>
         <sys_created_by>jacebenson</sys_created_by>
-        <sys_created_on>2019-05-08 12:05:08</sys_created_on>
-        <sys_id>cd2d1d5d4f5977006641cfa18110c7cf</sys_id>
+        <sys_created_on>2019-05-07 23:02:39</sys_created_on>
+        <sys_id>e74aa1114f513300dcc74a10a310c731</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Items</sys_name>
         <sys_package display_value="LendIt" source="x_snc_lendit">3186d5954f5d7700c660b1d18110c7fa</sys_package>
         <sys_policy/>
         <sys_scope display_value="LendIt">3186d5954f5d7700c660b1d18110c7fa</sys_scope>
-        <sys_update_name>sys_sg_master_detail_screen_cd2d1d5d4f5977006641cfa18110c7cf</sys_update_name>
-        <sys_updated_by>jacebenson</sys_updated_by>
-        <sys_updated_on>2019-05-07 22:06:13</sys_updated_on>
+        <sys_update_name>sys_sg_master_detail_screen_e74aa1114f513300dcc74a10a310c731</sys_update_name>
+        <sys_updated_by>jlighthall</sys_updated_by>
+        <sys_updated_on>2019-05-08 02:47:17</sys_updated_on>
     </sys_sg_master_detail_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=cd2d1d5d4f5977006641cfa18110c7cf"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e74aa1114f513300dcc74a10a310c731"/>
 </record_update>
